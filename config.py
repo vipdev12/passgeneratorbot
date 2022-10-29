@@ -1,0 +1,1 @@
+configuration = {"bot_token": "5682912078:AAH_CZW4wW3pNyWkdzpLIQUyhz9d4m1KWjc"}
