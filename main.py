@@ -1,2 +1,3 @@
 from aiogram import Dispatcher, executor, Bot, types
-bot = Bot(token='bot_token')
+import config
+bot = Bot(token=config.configuration["bot_token"])
