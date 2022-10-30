@@ -1,5 +1,6 @@
 from aiogram import Dispatcher, executor, Bot, types
 import config
+import keyboard
 bot = Bot(token=config.configuration["bot_token"])
 dp = Dispatcher(bot)
 
@@ -8,7 +9,7 @@ async def send_welcome(message: types.Message):
     """
     This handler will be called when user sends `/start` or `/help` command
     """
-    await bot.send_message(message.chat.id, config.configuration["start"])
+    await bot.send_message(message.chat.id, config.configuration["start"], reply_markup=keyboard.start)
 
 
 
