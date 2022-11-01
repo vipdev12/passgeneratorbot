@@ -11,7 +11,10 @@ async def send_welcome(message: types.Message):
     """
     await bot.send_message(message.chat.id, config.configuration["start"], reply_markup=keyboard.start)
 
-
+@dp.message_handler(content_types=['text'])
+async def text_filter(message: types.Message):
+    if message.text == "🎲Рандомный пароль":
+        await bot.send_message(message.chat.id, "🔑Выбор пароля: ", reply_markup=keyboard.password_1_inline)
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
